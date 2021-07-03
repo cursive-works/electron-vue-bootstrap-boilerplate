@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="./dist/renderer.bundle.css" rel="stylesheet">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello.</h1>
+    <p>
+        This is a desktop application built with
+        <a href="https://www.electronjs.org/">Electron</a>,
+        <a href="https://vuejs.org/">Vue 2</a>,
+        <a href="https://getbootstrap.com/">Bootstrap</a> and
+        <a href="https://bootstrap-vue.org">BootstrapVue</a>.
+
+        It includes a secure bridged api endpoint as a starting point for providing integrations
+        without exposing user data, e.g. API_KEYS, to 'world facing' render processes.
+        See <a href="https://www.electronjs.org/docs/tutorial/process-model">Electron's process model</a>
+        and
+        <a href="https://www.electronjs.org/docs/api/ipc-main">Electron's inter process communication</a>
+    </p>
+    <p>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+    </p>
+
+
+    <p>This is a BootstrapVue table loaded with data via the bridged api:<p>
+    <p id="vue-mount">
+        <foo></foo>
+    </p>
+
+    <script src="./dist/renderer.bundle.js" type="module"></script>
+  </body>
+
+</html>
