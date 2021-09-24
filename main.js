@@ -30,7 +30,6 @@ app.whenReady().then(() => {
    Protected full node environment API bridged
 */
 ipcMain.on('get_example_items', (event, arg) => {
-    // heroku.get('/apps').then(apps => event.reply('app_list', apps))
 
     let items = [
         { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
